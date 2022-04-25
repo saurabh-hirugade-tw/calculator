@@ -1,57 +1,58 @@
-body{
-    margin: 0;
-    background: linear-gradient(to right, #fba6a6, #a5abef);;
-    /* background-color: aqua; */
+body {
+  margin: 0;
+  background: linear-gradient(to right, #fba6a6, #a5abef);
 }
 
 .calculator {
-    margin: 2rem;
-    display: grid;
-    justify-content: center;
+  margin: 2rem;
+  display: grid;
+  justify-content: center;
 }
 
-.operators > button, .digits > button {
-    cursor: pointer;
-    font-size: 1.3rem;
-    /* outline: none; */
-    border: 0px;
+.operators > button,
+.digits > button {
+  cursor: pointer;
+  font-size: 1.3rem;
+  /* outline: none; */
+  border: 0px;
 }
 
-.operators > button:hover, .digits > button:hover{
-    background-color:#cbcbcb;
+.operators > button:hover,
+.digits > button:hover {
+  background-color: #cbcbcb;
 }
 .operators {
-    display: grid;
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: minmax(4rem, auto) repeat(1, 4rem);
+  display: grid;
+  grid-template-columns: repeat(3, 6rem);
+  grid-template-rows: minmax(4rem, auto) repeat(1, 4rem);
 }
 
-.digits{
-    margin-top: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: minmax(4rem, auto) repeat(4, 4rem);
+.digits {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 6rem);
+  grid-template-rows: minmax(4rem, auto) repeat(4, 4rem);
 }
 
 .output {
-    background-color: rgb(0,0,0,0.7);
-    min-height: 6rem;
-    max-width: 18rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    
-    word-wrap: break-word;
-    word-break: break-all;
+  background-color: rgb(0, 0, 0, 0.7);
+  min-height: 6rem;
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  word-wrap: break-word;
+  word-break: break-all;
 }
-.output .result{
-    color: rgb(255,255,255, 0.5);
-    font-size: 1rem;
-    padding: 0.5rem;
+.output .result {
+  color: rgb(255, 255, 255, 0.5);
+  font-size: 1rem;
+  padding: 0.5rem;
 }
-.output .operation{
-    color: white;
-    font-size: 2rem;
-    padding: 0.5rem;
+.output .operation {
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
 }

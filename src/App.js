@@ -1,6 +1,7 @@
 import "./styles.css";
 import { useState } from "react";
 import { evaluate } from "mathjs";
+import DigitButtons from "./components/DigitButtons";
 
 function App() {
   const [operation, setOperation] = useState("");
@@ -46,18 +47,6 @@ function App() {
     setResult("");
   };
 
-  const createDigitButtons = () => {
-    const digits = [];
-    for (let i = 1; i < 10; i++) {
-      digits.push(
-        <button key={i} onClick={() => updateOperation(i.toString())}>
-          {i}
-        </button>
-      );
-    }
-    return digits;
-  };
-
   return (
     <div className="calculator">
       <div className="output">
@@ -72,12 +61,7 @@ function App() {
         <button onClick={() => updateOperation("+")}>+</button>
         <button onClick={() => updateOperation("-")}>-</button>
       </div>
-      <div className="digits">
-        {createDigitButtons()}
-        <button onClick={() => updateOperation("0")}>0</button>
-        <button onClick={() => updateOperation(".")}>.</button>
-        <button onClick={equate}>=</button>
-      </div>
+      <DigitButtons updateOperation={updateOperation} equate={equate} />
     </div>
   );
 }
