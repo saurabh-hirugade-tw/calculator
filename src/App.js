@@ -1,4 +1,4 @@
-
+import "./styles.css";
 function App() {
 
   const createDigitButtons = () => {
@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="calculator">
       <div className="output">
         <div className="result">{}</div>
         <div className="operation">{}</div>
